@@ -1,1 +1,25 @@
+#include <iostream>
+using namespace std;
 
+int main() {
+    
+    //making pointer of pointer 
+    int **arr=new int*[5];
+    int size_array[5];
+    for(int i=0;i<5;i++){
+        int siz;
+        cin>>siz;
+        size_array[i]=siz;
+        
+        // storing first index of the array
+        arr[i]=new int[siz];
+    }
+    // first line hai
+    for(int i=0;i<5;i++){
+        int siz=size_array[i];
+        // kitna size hai wo print karan hai
+        for(int j=0;j<siz;j++){
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
